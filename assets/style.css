@@ -1,0 +1,136 @@
+:root {
+  --background-color: #F8F8FF;
+  --primary-color: #ffa500;
+  --secondary-color: white;
+  --accent-color: #1e3a5f;
+}
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("./fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("./fonts/roboto-regular-webfont.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norse-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+html {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  line-height: 1.5;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.parent-container {
+  height: 100vh;
+  display: flex;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 30%;
+  color: white;
+}
+
+.form-container {
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.form-container div:nth-child(odd) {
+  height: 30%;
+}
+
+.form {
+  background-color: var(--secondary-color);
+  height: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section1 {
+  padding: 4rem 2rem;
+}
+
+.section1 > h4 + h4 {
+  margin-top: 1.5rem;
+}
+
+.footer {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-container {
+  width: 30%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  font-family: "Norse";
+  font-size: 5rem;
+}
+
+.form {
+  color: var(--accent-color);
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 12rem;
+}
+
+label {
+  display: block;
+}
+
+form div{
+  display: flex;
+}
